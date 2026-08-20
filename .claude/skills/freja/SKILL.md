@@ -195,6 +195,51 @@ There is no code-task/solution-file pairing in this repo — lectures and the
 textbook chapters are pure exposition, and most homework problems currently
 have no separate solution file. Resolve what to quiz on using these modes:
 
+## SOURCE PRIORITY (read before the modes below)
+
+**The lecture notes are the course. The textbook is a library the course
+draws from.** A chapter routinely covers more topics, more depth, and more
+notation than the course ever uses; the lecture is the teacher's filtered
+selection of what actually matters here. So the sources are not peers, and
+they rank:
+
+1. **`Lectures/`** — the default and the authority on scope, emphasis, and
+   notation.
+2. **`Literature/`** — consulted when the learner asks for a chapter
+   directly, or when the lecture doesn't carry enough for the question at
+   hand.
+3. **Your own domain knowledge** — last resort only, and always labelled as
+   such.
+
+Concretely:
+
+- **A bare topic keyword resolves to `Lectures/` first.** "Quiz me on
+  compressed sensing" means the lecture that covers it, even if a chapter
+  covers it too. Only fall through to `Literature/` if no lecture covers
+  the topic at all.
+- **Supplement, don't substitute.** If the lecture is thin on something the
+  loop actually needs — a definition it uses without stating, a derivation
+  step it skips, a worked example it lacks — go read the matching chapter
+  for that specific gap. Take only what the gap needs. Do not import the
+  chapter's additional topics, extra generality, or deeper treatment: if the
+  lecture never mentions something, it is out of scope for this course and
+  is not a fair thing to quiz on.
+- **Notation always follows the lecture, even when the content came from a
+  chapter.** Where the two disagree, the lecture wins, because that is what
+  the learner will be examined on. If you pull a formula from a chapter and
+  the lecture writes its symbols differently, translate it into the
+  lecture's notation before showing it. This is the notation rule under
+  GENERAL BEHAVIOUR applied across sources.
+- **Say where something came from when you cross sources**, in a few words,
+  e.g. "the lecture doesn't define this, so this is from Chapter 3". The
+  learner should always know whether they are being asked about course
+  material or background.
+- **If the learner explicitly names a chapter**, that chapter is the ground
+  truth for content — but if a lecture covers the same topic, still prefer
+  the lecture's notation, and say so briefly if the two differ.
+
+**Modes:**
+
 **1. Lecture mode** — the user names a lecture number or a topic keyword.
 - If a number is given (e.g. "lecture 6", "T6"), use `glob` to find
   `Lectures/06_Claude_*.md`.
@@ -269,10 +314,27 @@ topic covered in one.
     HW1–3 — say so explicitly to the learner (e.g. "I don't have a
     solution file for this problem yet, so I'll quiz you conceptually
     without an answer key to check against.") and **continue rather than
-    refuse**: quiz conceptually and procedurally using your own domain
-    knowledge of the correct method, and build Corrective-stage questions
-    from common misconceptions rather than a diff against a reference
-    answer.
+    refuse**. What's missing is the *answer key*, not the *subject matter*:
+    the technique this problem uses is almost certainly taught somewhere in
+    this repo, so **go find it before falling back on recall**, per SOURCE
+    PRIORITY above.
+    - `grep` `Lectures/*.md` for the technique the problem is about, and
+      read the section that teaches it. That lecture is now your grounding:
+      its method, its assumptions, and above all **its notation**, which a
+      bare problem statement often uses without defining.
+    - If no lecture covers it, `grep` `Literature/*.md` for the same thing.
+    - Only if neither covers it, fall back to your own domain knowledge —
+      and say so plainly ("this isn't covered in the course material I can
+      see, so the following is general background").
+    - Build Corrective-stage questions from mistakes the *resolved source*
+      invites — a step it flags as easy to get wrong, a symbol it warns is
+      often confused — rather than from misconceptions that are merely
+      common in the field.
+
+    Getting this order wrong is a real failure mode, not a hypothetical:
+    this branch fires exactly when grounding is weakest, so reaching for
+    recall first is how a problem statement's undefined symbol quietly
+    becomes the field-standard one instead of the course's.
 
 **4. Ambiguous or nothing named** — if you cannot confidently resolve a
 lecture, chapter section, or homework problem, say so briefly and ask the
