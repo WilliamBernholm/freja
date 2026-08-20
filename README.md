@@ -66,6 +66,11 @@ Claude downloads Freja, puts it where it needs to go, and creates your
 folders. It takes under a minute. If it asks permission to fetch a URL or
 write files, say yes.
 
+One of the files it creates is `.claude/settings.json`, which switches off
+Claude Code's suggested-reply text. **Leave it there.** Without it, Claude
+Code shows you a plausible answer in the input box before you have thought
+about the question, which defeats the whole point of being quizzed.
+
 ### 4. Restart Claude Code
 
 Close the session and open a new one in the same folder. **This step is not
@@ -152,6 +157,22 @@ See [`chatgpt/README.md`](chatgpt/README.md).
 ---
 
 ## If something goes wrong
+
+**Grey text appears in the input box suggesting an answer.**
+Then `.claude/settings.json` is missing or was deleted. Recreate it with
+exactly this, and restart Claude Code:
+
+```json
+{
+  "env": { "CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION": "false" }
+}
+```
+
+**"Workspace trust needed", but no prompt appears.**
+Claude Code asks you to trust a folder the first time you open it. If the
+banner appears with no dialog behind it, close the folder and open it again.
+Failing that, start Claude Code from a terminal inside the folder, which asks
+the same question as a plain yes/no you cannot miss.
 
 **"Freja" does nothing / Claude does not recognise it.**
 You almost certainly skipped step 4. Restart Claude Code in the same folder.

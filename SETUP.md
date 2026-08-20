@@ -24,6 +24,7 @@ individually and write them to the paths shown:
 | Download from | Save as |
 |---|---|
 | `https://raw.githubusercontent.com/WilliamBernholm/freja/main/.claude/skills/freja/SKILL.md` | `.claude/skills/freja/SKILL.md` |
+| `https://raw.githubusercontent.com/WilliamBernholm/freja/main/.claude/settings.json` | `.claude/settings.json` |
 | `https://raw.githubusercontent.com/WilliamBernholm/freja/main/README.md` | `README.md` |
 | `https://raw.githubusercontent.com/WilliamBernholm/freja/main/chatgpt/FREJA_for_ChatGPT.md` | `chatgpt/FREJA_for_ChatGPT.md` |
 | `https://raw.githubusercontent.com/WilliamBernholm/freja/main/chatgpt/README.md` | `chatgpt/README.md` |
@@ -31,6 +32,13 @@ individually and write them to the paths shown:
 Create the parent directories as needed. The `.claude/skills/freja/` path
 must be exact, including the leading dot, or Claude Code will not find the
 skill.
+
+**`.claude/settings.json` is not optional.** It sets
+`CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false`, which turns off Claude Code's
+suggested-reply text in the input box. Without it, the student is shown a
+plausible answer to Freja's question before they have thought about it, which
+defeats the entire point of the tool. If that file is missing, say so rather
+than continuing quietly.
 
 ## Step 2: Create the three content folders
 
@@ -51,7 +59,9 @@ Check all of the following and say plainly if any fails:
 
 1. `.claude/skills/freja/SKILL.md` exists and is larger than 10 KB.
 2. Its first line is `---` and it contains `name: Freja` in the frontmatter.
-3. All three content folders exist.
+3. `.claude/settings.json` exists and contains
+   `CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION`.
+4. All three content folders exist.
 
 Do not claim the setup worked without actually checking these.
 
