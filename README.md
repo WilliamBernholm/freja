@@ -19,6 +19,23 @@ It runs through five stages, in order:
 
 ---
 
+## This is a work in progress, and feedback is wanted
+
+Freja is new and still being tested. It works well on individual lecture
+notes, but it has not been through a full course yet, and there are rough
+edges.
+
+**The bad feedback is the useful kind.** If a question was confusing, if it
+quizzed you on something your notes never actually said, if the setup did not
+work, or if it simply was not helpful, please say so. Open an issue on this
+repo, or tell me directly if you are on one of my courses.
+
+What helps most is a concrete example: what you asked, what it said, and what
+you expected instead. "It got the notation wrong in lecture 6" is worth ten
+times more than "it was a bit off".
+
+---
+
 ## Setup, in four steps
 
 You need **[Claude Code](https://claude.com/claude-code)** installed. Nothing
