@@ -1,0 +1,15 @@
+# Your course material stays out of git.
+# These folders are yours; nothing in them belongs in this repo.
+Lectures/*
+Literature/*
+Homeworks/*
+!Lectures/.gitkeep
+!Literature/.gitkeep
+!Homeworks/.gitkeep
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
