@@ -145,14 +145,17 @@ and Freja will follow those instead of these defaults.
 
 ---
 
-## Prefer ChatGPT?
+## Prefer ChatGPT or Gemini?
 
 There is a version that works in plain web chat, in [`chatgpt/`](chatgpt/).
-No installation at all: paste one file into ChatGPT, upload a lecture note,
-and go. It is slightly less capable, because it cannot search your folders
-the way Claude Code can, but it works on a free account.
+No installation at all: upload one file plus a lecture note and go. Tested
+working in both ChatGPT and Gemini, on free accounts. It is slightly less
+capable, because it cannot search your folders the way Claude Code can.
 
-See [`chatgpt/README.md`](chatgpt/README.md).
+One thing to know before you start: **say "run Freja", not "quiz me".** In
+Gemini the word "quiz" triggers its own built-in multiple-choice quiz feature
+and you never get Freja at all. Details in
+[`chatgpt/README.md`](chatgpt/README.md).
 
 ---
 

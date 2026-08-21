@@ -1,15 +1,31 @@
-# Freja in ChatGPT
+# Freja in web chat (ChatGPT or Gemini)
 
 Use this if you do not have Claude Code, or just want to try Freja without
-installing anything. It works on a free ChatGPT account.
+installing anything. It works on a free ChatGPT account, and it has also been
+tested working in Gemini.
 
 ## How to run it
 
-1. Open a **new** ChatGPT chat.
+1. Open a **new** chat.
 2. Attach **two** files:
    - `FREJA_for_ChatGPT.md` from this folder
    - **one** lecture note or textbook section from your course
 3. Type `run Freja`.
+
+## Say "run Freja", not "quiz me"
+
+This matters, especially in Gemini.
+
+Gemini has its own built-in quiz feature. If your first message contains the
+word **quiz**, Gemini will hand the request to that feature instead of to
+Freja, and you will get ten multiple-choice questions with a score counter
+rather than the loop. Multiple choice is the wrong tool here: picking an
+option from a list is far easier than saying the thing in your own words, and
+saying it in your own words is the entire point.
+
+**"Run Freja" avoids it.** If you get a quiz card anyway, there is usually a
+"try again without interactive quiz" link underneath it, or just start a new
+chat and phrase it differently.
 
 That is the whole setup. It should reply "Freja v6 loaded" and then show you
 a list of the sections it can see in your file, so you can confirm it read
