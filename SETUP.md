@@ -26,8 +26,8 @@ individually and write them to the paths shown:
 | `https://raw.githubusercontent.com/WilliamBernholm/freja/main/.claude/skills/freja/SKILL.md` | `.claude/skills/freja/SKILL.md` |
 | `https://raw.githubusercontent.com/WilliamBernholm/freja/main/.claude/settings.json` | `.claude/settings.json` |
 | `https://raw.githubusercontent.com/WilliamBernholm/freja/main/README.md` | `README.md` |
-| `https://raw.githubusercontent.com/WilliamBernholm/freja/main/chatgpt/FREJA_for_ChatGPT.md` | `chatgpt/FREJA_for_ChatGPT.md` |
-| `https://raw.githubusercontent.com/WilliamBernholm/freja/main/chatgpt/README.md` | `chatgpt/README.md` |
+| `https://raw.githubusercontent.com/WilliamBernholm/freja/main/web/FREJA_web.md` | `web/FREJA_web.md` |
+| `https://raw.githubusercontent.com/WilliamBernholm/freja/main/web/README.md` | `web/README.md` |
 
 Create the parent directories as needed. The `.claude/skills/freja/` path
 must be exact, including the leading dot, or Claude Code will not find the
